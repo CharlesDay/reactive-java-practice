@@ -10,6 +10,11 @@ public class Exercise5 {
 
         // Subscribe to a flux using the error and completion hooks
         // TODO: Write code here
+        ReactiveSources.intNumbersFlux().subscribe(
+                number -> System.out.println(number),
+                err -> System.out.println(err.getMessage()),
+                () -> System.out.println("Complete")
+        );
 
         // Subscribe to a flux using an implementation of BaseSubscriber
         // TODO: Write code here
